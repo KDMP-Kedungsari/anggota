@@ -270,6 +270,22 @@
             display: block;
         }
 
+        .product-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 10px auto;
+            display: block;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .product-image:hover {
+            transform: scale(1.1);
+            border-color: rgba(255, 255, 255, 0.8);
+        }
+
         .product-name {
             color: white;
             font-weight: 600;
@@ -421,7 +437,6 @@
                         <li>Cek saldo simpanan real-time</li>
                         <li>Riwayat transaksi lengkap</li>
                         <li>Update data pribadi</li>
-                        <li>Pengajuan pinjaman online</li>
                         <li>Notifikasi promo khusus anggota</li>
                     </ul>
                 </div>
@@ -440,11 +455,7 @@
                     <span class="status-indicator"></span>Belanja kebutuhan sehari-hari dengan harga spesial anggota. Produk berkualitas, pelayanan terbaik, untung bersama!
                     
                     <ul class="feature-list">
-                        <li>Harga khusus anggota (diskon 5-15%)</li>
                         <li>Produk segar dan berkualitas</li>
-                        <li>Sistem poin reward</li>
-                        <li>Belanja kredit untuk anggota</li>
-                        <li>Katalog produk terlengkap</li>
                     </ul>
                 </div>
                 <a href="https://kdmp-kedungsari.github.io/koperasi-website/" 
@@ -482,11 +493,7 @@
                     <span class="status-indicator"></span>Program reward dan cashback eksklusif untuk anggota setia dengan berbagai keuntungan menarik.
                     
                     <ul class="feature-list">
-                        <li>Cashback hingga 10%</li>
-                        <li>Poin reward setiap belanja</li>
-                        <li>Birthday bonus special</li>
-                        <li>Referral bonus anggota baru</li>
-                        <li>Event eksklusif anggota</li>
+                        <li>Segera Hadir</li>
                     </ul>
                 </div>
                 <button onclick="showComingSoon('Program Loyalitas')" class="project-button secondary">
@@ -503,24 +510,17 @@
                     <h4>🌟 Untuk Calon Anggota</h4>
                     <p>Bergabunglah dengan keluarga besar KDMP dan rasakan perbedaannya!</p>
                     <div class="promo-highlight">
-                        • Diskon belanja hingga 15%<br>
-                        • Simpanan berjasa kompetitif<br>
-                        • Pinjaman bunga rendah<br>
-                        • Divisi hasil usaha (SHU)<br>
                         • Akses produk eksklusif
                     </div>
-                    <p><strong>Daftar sekarang hanya dengan Rp 50.000!</strong></p>
+                    <p><strong>Daftar sekarang hanya dengan Rp 100.000!</strong></p>
                 </div>
                 
                 <div class="promo-card">
                     <h4>🛍️ Untuk Anggota Aktif</h4>
                     <p>Belanja di koperasi = Untung berkali lipat untuk masa depan!</p>
                     <div class="promo-highlight">
-                        • Setiap belanja = poin reward<br>
-                        • Harga lebih murah dari toko lain<br>
                         • Produk segar langsung dari petani<br>
                         • Berkontribusi untuk kemajuan desa<br>
-                        • Cashback bulanan
                     </div>
                     <p><strong>Semakin sering belanja = SHU semakin besar!</strong></p>
                 </div>
@@ -532,32 +532,33 @@
             <h3>🆕 Produk Baru & Promo Spesial</h3>
             <div class="products-grid">
                 <div class="product-card">
-                    <span class="product-icon">🌾</span>
+                    <img src="products/beras-premium.jpg" alt="Beras Premium" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span class="product-icon" style="display: none;">🌾</span>
                     <div class="product-name">Beras Premium</div>
-                    <div class="product-price">Rp 12.000/kg</div>
                 </div>
                 <div class="product-card">
-                    <span class="product-icon">🥬</span>
+                    <img src="products/sayuran-segar.jpg" alt="Sayuran Segar" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span class="product-icon" style="display: none;">🥬</span>
                     <div class="product-name">Sayuran Segar</div>
-                    <div class="product-price">Diskon 20%</div>
                 </div>
                 <div class="product-card">
-                    <span class="product-icon">🧴</span>
+                    <img src="products/kebutuhan-rumah.jpg" alt="Kebutuhan Rumah" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span class="product-icon" style="display: none;">🧴</span>
                     <div class="product-name">Kebutuhan Rumah</div>
-                    <div class="product-price">Harga Grosir</div>
                 </div>
                 <div class="product-card">
-                    <span class="product-icon">☕</span>
+                    <img src="products/kopi-lokal.jpg" alt="Kopi Lokal" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span class="product-icon" style="display: none;">☕</span>
                     <div class="product-name">Kopi Lokal</div>
-                    <div class="product-price">Rp 25.000</div>
                 </div>
                 <div class="product-card">
-                    <span class="product-icon">🍯</span>
+                    <img src="products/madu-asli.jpg" alt="Madu Asli" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span class="product-icon" style="display: none;">🍯</span>
                     <div class="product-name">Madu Asli</div>
-                    <div class="product-price">Rp 45.000</div>
                 </div>
                 <div class="product-card">
-                    <span class="product-icon">🎁</span>
+                    <img src="products/paket-ramadhan.jpg" alt="Paket Ramadhan" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span class="product-icon" style="display: none;">🎁</span>
                     <div class="product-name">Paket Ramadhan</div>
                     <div class="product-price">Promo Spesial</div>
                 </div>
