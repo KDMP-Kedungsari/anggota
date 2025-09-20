@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Basic SEO Meta Tags -->
+    <title>Dashboard Anggota - Koperasi Desa Merah Putih Kalurahan Kedungsari</title>
+    <meta name="description" content="Portal anggota Koperasi Desa Merah Putih di Kalurahan Kedungsari. Akses account anggota, gerai koperasi, dan nikmati berbagai keuntungan menjadi anggota.">
+    <meta name="keywords" content="anggota koperasi, koperasi desa, merah putih, kedungsari, dashboard anggota, gerai koperasi, simpan pinjam, belanja koperasi">
+    <meta name="author" content="Koperasi Desa Merah Putih">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Indonesian">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kdmp-kedungsari.github.io/anggota/">
+    <meta property="og:title" content="Dashboard Anggota - Koperasi Desa Merah Putih">
+    <meta property="og:description" content="Portal anggota Koperasi Desa Merah Putih di Kalurahan Kedungsari. Bergabunglah dan nikmati keuntungan berbelanja di koperasi desa terpercaya.">
+    <meta property="og:image" content="https://kdmp-kedungsari.github.io/anggota/og-image.jpg">
+    <meta property="og:site_name" content="Koperasi Desa Merah Putih">
+    <meta property="og:locale" content="id_ID">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://kdmp-kedungsari.github.io/anggota/">
+    <meta property="twitter:title" content="Dashboard Anggota - Koperasi Desa Merah Putih">
+    <meta property="twitter:description" content="Portal anggota Koperasi Desa Merah Putih untuk akses layanan dan belanja di gerai koperasi.">
+    <meta property="twitter:image" content="https://kdmp-kedungsari.github.io/anggota/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://kdmp-kedungsari.github.io/anggota/">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Koperasi Desa Merah Putih",
+        "description": "Koperasi Simpan Pinjam di Kalurahan Kedungsari yang melayani masyarakat desa dengan berbagai produk dan layanan keuangan.",
+        "url": "https://kdmp-kedungsari.github.io/koperasi-website/",
+        "logo": "https://kdmp-kedungsari.github.io/koperasi-website/assets/logo.png",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Kedungsari",
+            "addressRegion": "Yogyakarta",
+            "addressCountry": "Indonesia"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Customer Service",
+            "availableLanguage": "Indonesian"
+        },
+        "sameAs": [
+            "https://kdmp-kedungsari.github.io/koperasi-website/"
+        ]
+    }
+    </script>
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#667eea">
+    <meta name="msapplication-TileColor" content="#667eea">
+    <meta name="application-name" content="Dashboard Anggota Koperasi Desa Merah Putih">
+    <meta name="apple-mobile-web-app-title" content="Anggota KDMP">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header h2 {
+            font-size: 1.2em;
+            opacity: 0.9;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        .promo-banner {
+            background: linear-gradient(45deg, #ff6b6b, #feca57);
+            padding: 15px 25px;
+            border-radius: 30px;
+            margin-top: 20px;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { box-shadow: 0 0 20px rgba(255, 107, 107, 0.3); }
+            to { box-shadow: 0 0 30px rgba(254, 202, 87, 0.5); }
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .project-title {
+            color: white;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .project-description {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin: 15px 0;
+        }
+
+        .feature-list li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .feature-list li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+        }
+
+        .project-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(238, 90, 36, 0.3);
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+        }
+
+        .project-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(238, 90, 36, 0.4);
+            background: linear-gradient(45deg, #ee5a24, #ff6b6b);
+        }
+
+        .project-button.secondary {
+            background: linear-gradient(45deg, #4ecdc4, #44a08d);
+            box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
+        }
+
+        .project-button.secondary:hover {
+            background: linear-gradient(45deg, #44a08d, #4ecdc4);
+            box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
+        }
+
+        .products-showcase {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .products-showcase h3 {
+            color: white;
+            margin-bottom: 25px;
+            font-size: 1.4em;
+            text-align: center;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .product-icon {
+            font-size: 3em;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .product-name {
+            color: white;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .product-price {
+            color: #feca57;
+            font-weight: 700;
+            font-size: 1.1em;
+        }
+
+        .promotion-section {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .promotion-section h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+            text-align: center;
+        }
+
+        .promo-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .promo-card {
+            background: linear-gradient(135deg, rgba(255, 107, 107, 0.8), rgba(254, 202, 87, 0.8));
+            padding: 25px;
+            border-radius: 15px;
+            color: white;
+            text-align: center;
+        }
+
+        .promo-card h4 {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+        }
+
+        .promo-card p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .promo-highlight {
+            background: rgba(255, 255, 255, 0.3);
+            padding: 10px;
+            border-radius: 10px;
+            font-weight: 700;
+        }
+
+        .footer {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 40px;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .project-card {
+                padding: 20px;
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 15px;
+            }
+
+            .promo-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .status-indicator {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #4ecdc4;
+            margin-right: 8px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        .coming-soon {
+            opacity: 0.7;
+        }
+
+        .coming-soon .project-button {
+            background: linear-gradient(45deg, #95a5a6, #7f8c8d);
+            box-shadow: 0 4px 15px rgba(149, 165, 166, 0.3);
+        }
+
+        .coming-soon .project-button:hover {
+            background: linear-gradient(45deg, #7f8c8d, #95a5a6);
+            box-shadow: 0 6px 20px rgba(149, 165, 166, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>👥 Dashboard Anggota</h1>
+            <h2>🏢 Koperasi Desa Merah Putih - Kalurahan Kedungsari</h2>
+            <div class="promo-banner">
+                <strong>🎉 Bergabunglah dengan 500+ anggota dan rasakan keuntungannya! 🎉</strong>
+            </div>
+        </div>
+
+        <!-- SEO Content for better indexing -->
+        <section style="display: none;" aria-hidden="true">
+            <h1>Portal Anggota Koperasi Desa Merah Putih Kedungsari</h1>
+            <p>Dashboard khusus anggota Koperasi Desa Merah Putih di Kalurahan Kedungsari, Yogyakarta. Akses account anggota, belanja di gerai koperasi, dan nikmati berbagai keuntungan eksklusif untuk anggota.</p>
+            <p>Koperasi simpan pinjam yang memberikan pelayanan terbaik dengan produk berkualitas dan harga terjangkau untuk kesejahteraan bersama.</p>
+        </section>
+
+        <div class="dashboard-grid">
+            <div class="project-card">
+                <div class="project-title">
+                    👤 Account Anggota
+                </div>
+                <div class="project-description">
+                    <span class="status-indicator"></span>Portal khusus untuk anggota koperasi. Kelola data pribadi, cek saldo simpanan, dan akses layanan eksklusif anggota.
+                    
+                    <ul class="feature-list">
+                        <li>Cek saldo simpanan real-time</li>
+                        <li>Riwayat transaksi lengkap</li>
+                        <li>Update data pribadi</li>
+                        <li>Pengajuan pinjaman online</li>
+                        <li>Notifikasi promo khusus anggota</li>
+                    </ul>
+                </div>
+                <a href="https://script.google.com/macros/s/AKfycbxbX3URhG5Ttbgy2JUMYlTKLhFOKiYfYqM6p1y_xZYPJ2RNQWEZIBXBRp22fpMotO1j/exec" 
+                   target="_blank" 
+                   class="project-button">
+                   🚀 Masuk ke Account Anggota
+                </a>
+            </div>
+
+            <div class="project-card">
+                <div class="project-title">
+                    🏪 Gerai Koperasi
+                </div>
+                <div class="project-description">
+                    <span class="status-indicator"></span>Belanja kebutuhan sehari-hari dengan harga spesial anggota. Produk berkualitas, pelayanan terbaik, untung bersama!
+                    
+                    <ul class="feature-list">
+                        <li>Harga khusus anggota (diskon 5-15%)</li>
+                        <li>Produk segar dan berkualitas</li>
+                        <li>Sistem poin reward</li>
+                        <li>Belanja kredit untuk anggota</li>
+                        <li>Katalog produk terlengkap</li>
+                    </ul>
+                </div>
+                <a href="https://kdmp-kedungsari.github.io/koperasi-website/" 
+                   target="_blank" 
+                   class="project-button secondary">
+                   🛒 Kunjungi Gerai Koperasi
+                </a>
+            </div>
+
+            <div class="project-card coming-soon">
+                <div class="project-title">
+                    📱 Mobile Apps Anggota
+                </div>
+                <div class="project-description">
+                    <span class="status-indicator"></span>Aplikasi mobile khusus anggota untuk kemudahan akses semua layanan koperasi di genggaman Anda.
+                    
+                    <ul class="feature-list">
+                        <li>Notifikasi push real-time</li>
+                        <li>Scan barcode untuk belanja</li>
+                        <li>E-wallet koperasi</li>
+                        <li>Chat customer service</li>
+                        <li>Lokasi gerai terdekat</li>
+                    </ul>
+                </div>
+                <button onclick="showComingSoon('Mobile Apps')" class="project-button">
+                    📲 Download Apps (Segera Hadir)
+                </button>
+            </div>
+
+            <div class="project-card coming-soon">
+                <div class="project-title">
+                    🎯 Program Loyalitas
+                </div>
+                <div class="project-description">
+                    <span class="status-indicator"></span>Program reward dan cashback eksklusif untuk anggota setia dengan berbagai keuntungan menarik.
+                    
+                    <ul class="feature-list">
+                        <li>Cashback hingga 10%</li>
+                        <li>Poin reward setiap belanja</li>
+                        <li>Birthday bonus special</li>
+                        <li>Referral bonus anggota baru</li>
+                        <li>Event eksklusif anggota</li>
+                    </ul>
+                </div>
+                <button onclick="showComingSoon('Program Loyalitas')" class="project-button secondary">
+                    🏆 Lihat Program Loyalitas (Segera)
+                </button>
+            </div>
+        </div>
+
+        <!-- Promotion Section -->
+        <div class="promotion-section">
+            <h3>🎊 Keuntungan Menjadi Anggota Koperasi Desa Merah Putih</h3>
+            <div class="promo-content">
+                <div class="promo-card">
+                    <h4>🌟 Untuk Calon Anggota</h4>
+                    <p>Bergabunglah dengan keluarga besar KDMP dan rasakan perbedaannya!</p>
+                    <div class="promo-highlight">
+                        • Diskon belanja hingga 15%<br>
+                        • Simpanan berjasa kompetitif<br>
+                        • Pinjaman bunga rendah<br>
+                        • Divisi hasil usaha (SHU)<br>
+                        • Akses produk eksklusif
+                    </div>
+                    <p><strong>Daftar sekarang hanya dengan Rp 50.000!</strong></p>
+                </div>
+                
+                <div class="promo-card">
+                    <h4>🛍️ Untuk Anggota Aktif</h4>
+                    <p>Belanja di koperasi = Untung berkali lipat untuk masa depan!</p>
+                    <div class="promo-highlight">
+                        • Setiap belanja = poin reward<br>
+                        • Harga lebih murah dari toko lain<br>
+                        • Produk segar langsung dari petani<br>
+                        • Berkontribusi untuk kemajuan desa<br>
+                        • Cashback bulanan
+                    </div>
+                    <p><strong>Semakin sering belanja = SHU semakin besar!</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Products Showcase -->
+        <div class="products-showcase">
+            <h3>🆕 Produk Baru & Promo Spesial</h3>
+            <div class="products-grid">
+                <div class="product-card">
+                    <span class="product-icon">🌾</span>
+                    <div class="product-name">Beras Premium</div>
+                    <div class="product-price">Rp 12.000/kg</div>
+                </div>
+                <div class="product-card">
+                    <span class="product-icon">🥬</span>
+                    <div class="product-name">Sayuran Segar</div>
+                    <div class="product-price">Diskon 20%</div>
+                </div>
+                <div class="product-card">
+                    <span class="product-icon">🧴</span>
+                    <div class="product-name">Kebutuhan Rumah</div>
+                    <div class="product-price">Harga Grosir</div>
+                </div>
+                <div class="product-card">
+                    <span class="product-icon">☕</span>
+                    <div class="product-name">Kopi Lokal</div>
+                    <div class="product-price">Rp 25.000</div>
+                </div>
+                <div class="product-card">
+                    <span class="product-icon">🍯</span>
+                    <div class="product-name">Madu Asli</div>
+                    <div class="product-price">Rp 45.000</div>
+                </div>
+                <div class="product-card">
+                    <span class="product-icon">🎁</span>
+                    <div class="product-name">Paket Ramadhan</div>
+                    <div class="product-price">Promo Spesial</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2024 Koperasi Desa Merah Putih - Kalurahan Kedungsari</p>
+            <p>Dashboard Anggota - Versi 1.0</p>
+            <!-- SEO Footer Content -->
+            <div style="margin-top: 20px; font-size: 0.8em; opacity: 0.6;">
+                <p>Koperasi Simpan Pinjam | Gerai Belanja | Pemberdayaan Ekonomi Desa | Kalurahan Kedungsari | Yogyakarta</p>
+                <p>Melayani dengan Hati • Berkembang Bersama • Sejahtera Bersama</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Fungsi untuk menampilkan coming soon
+        function showComingSoon(feature) {
+            showNotification(`🚧 ${feature} akan segera hadir! Pantau terus update dari koperasi.`);
+        }
+
+        // Fungsi untuk menampilkan notifikasi
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.textContent = message;
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: rgba(78, 205, 196, 0.9);
+                color: white;
+                padding: 15px 25px;
+                border-radius: 10px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+                z-index: 1000;
+                font-weight: 600;
+                backdrop-filter: blur(10px);
+                max-width: 350px;
+                text-align: center;
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 4000);
+        }
+
+        // Tambahkan efek loading saat halaman dimuat
+        window.addEventListener('load', function() {
+            const cards = document.querySelectorAll('.project-card, .products-showcase, .promotion-section');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(30px)';
+                    card.style.transition = 'all 0.6s ease';
+                    
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 100);
+                }, index * 100);
+            });
+            
+            // Tampilkan welcome message
+            setTimeout(() => {
+                showNotification('🎉 Selamat datang di Portal Anggota KDMP! Nikmati semua keuntungan eksklusif Anda.');
+            }, 2000);
+        });
+
+        // Efek hover pada product cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const productCards = document.querySelectorAll('.product-card');
+            productCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px) scale(1.05)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
