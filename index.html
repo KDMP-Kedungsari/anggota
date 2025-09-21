@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Basic SEO Meta Tags -->
-    <title>Anggota - Koperasi Desa Merah Putih Kalurahan Kedungsari</title>
+    <title>Dashboard Anggota - Koperasi Desa Merah Putih Kalurahan Kedungsari</title>
     <meta name="description" content="Portal anggota Koperasi Desa Merah Putih di Kalurahan Kedungsari. Akses account anggota, gerai koperasi, dan nikmati berbagai keuntungan menjadi anggota.">
-    <meta name="keywords" content="anggota koperasi, koperasi desa, merah putih, kedungsari, dashboard anggota, gerai koperasi, belanja koperasi">
+    <meta name="keywords" content="anggota koperasi, koperasi desa, merah putih, kedungsari, dashboard anggota, gerai koperasi, simpan pinjam, belanja koperasi">
     <meta name="author" content="Koperasi Desa Merah Putih">
     <meta name="robots" content="index, follow">
     <meta name="language" content="Indonesian">
@@ -16,7 +16,7 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kdmp-kedungsari.github.io/anggota/">
-    <meta property="og:title" content="Anggota - Koperasi Desa Merah Putih">
+    <meta property="og:title" content="Dashboard Anggota - Koperasi Desa Merah Putih">
     <meta property="og:description" content="Portal anggota Koperasi Desa Merah Putih di Kalurahan Kedungsari. Bergabunglah dan nikmati keuntungan berbelanja di koperasi desa terpercaya.">
     <meta property="og:image" content="https://kdmp-kedungsari.github.io/anggota/og-image.jpg">
     <meta property="og:site_name" content="Koperasi Desa Merah Putih">
@@ -25,7 +25,7 @@
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://kdmp-kedungsari.github.io/anggota/">
-    <meta property="twitter:title" content="Anggota - Koperasi Desa Merah Putih">
+    <meta property="twitter:title" content="Dashboard Anggota - Koperasi Desa Merah Putih">
     <meta property="twitter:description" content="Portal anggota Koperasi Desa Merah Putih untuk akses layanan dan belanja di gerai koperasi.">
     <meta property="twitter:image" content="https://kdmp-kedungsari.github.io/anggota/og-image.jpg">
     
@@ -45,7 +45,7 @@
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Koperasi Desa Merah Putih",
-        "description": "Koperasi di Kalurahan Kedungsari yang melayani masyarakat desa dengan berbagai produk dan layanan keuangan.",
+        "description": "Koperasi Simpan Pinjam di Kalurahan Kedungsari yang melayani masyarakat desa dengan berbagai produk dan layanan keuangan.",
         "url": "https://kdmp-kedungsari.github.io/koperasi-website/",
         "logo": "https://kdmp-kedungsari.github.io/koperasi-website/assets/logo.png",
         "address": {
@@ -68,10 +68,50 @@
     <!-- Additional SEO Meta Tags -->
     <meta name="theme-color" content="#667eea">
     <meta name="msapplication-TileColor" content="#667eea">
-    <meta name="application-name" content="Anggota Koperasi Desa Merah Putih">
+    <meta name="application-name" content="Dashboard Anggota Koperasi Desa Merah Putih">
     <meta name="apple-mobile-web-app-title" content="Anggota KDMP">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Google Analytics 4 (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+
+        // Custom Event Tracking Functions
+        function trackButtonClick(buttonName, destination) {
+            gtag('event', 'click', {
+                event_category: 'Navigation',
+                event_label: buttonName,
+                value: 1
+            });
+            
+            gtag('event', 'outbound_click', {
+                event_category: 'Outbound Links',
+                event_label: destination,
+                value: 1
+            });
+        }
+
+        function trackProductView(productName) {
+            gtag('event', 'view_item', {
+                event_category: 'Product',
+                event_label: productName,
+                value: 1
+            });
+        }
+
+        function trackPageEngagement(action) {
+            gtag('event', 'engagement', {
+                event_category: 'User Engagement',
+                event_label: action,
+                value: 1
+            });
+        }
+    </script>
+    
     <style>
         * {
             margin: 0;
@@ -414,7 +454,7 @@
             <h1>👥 Dashboard Anggota</h1>
             <h2>🏢 Koperasi Desa Merah Putih - Kalurahan Kedungsari</h2>
             <div class="promo-banner">
-                <strong>🎉 Bergabunglah dengan 28+ anggota dan rasakan keuntungannya! 🎉</strong>
+                <strong>🎉 Bergabunglah dengan 500+ anggota dan rasakan keuntungannya! 🎉</strong>
             </div>
         </div>
 
@@ -437,12 +477,14 @@
                         <li>Cek saldo simpanan real-time</li>
                         <li>Riwayat transaksi lengkap</li>
                         <li>Update data pribadi</li>
+                        <li>Pengajuan pinjaman online</li>
                         <li>Notifikasi promo khusus anggota</li>
                     </ul>
                 </div>
                 <a href="https://script.google.com/macros/s/AKfycbxbX3URhG5Ttbgy2JUMYlTKLhFOKiYfYqM6p1y_xZYPJ2RNQWEZIBXBRp22fpMotO1j/exec" 
                    target="_blank" 
-                   class="project-button">
+                   class="project-button"
+                   onclick="trackButtonClick('Account Anggota', 'Google Apps Script')">
                    🚀 Masuk ke Account Anggota
                 </a>
             </div>
@@ -455,12 +497,17 @@
                     <span class="status-indicator"></span>Belanja kebutuhan sehari-hari dengan harga spesial anggota. Produk berkualitas, pelayanan terbaik, untung bersama!
                     
                     <ul class="feature-list">
+                        <li>Harga khusus anggota (diskon 5-15%)</li>
                         <li>Produk segar dan berkualitas</li>
+                        <li>Sistem poin reward</li>
+                        <li>Belanja kredit untuk anggota</li>
+                        <li>Katalog produk terlengkap</li>
                     </ul>
                 </div>
                 <a href="https://kdmp-kedungsari.github.io/koperasi-website/" 
                    target="_blank" 
-                   class="project-button secondary">
+                   class="project-button secondary"
+                   onclick="trackButtonClick('Gerai Koperasi', 'Website Koperasi')">
                    🛒 Kunjungi Gerai Koperasi
                 </a>
             </div>
@@ -480,7 +527,7 @@
                         <li>Lokasi gerai terdekat</li>
                     </ul>
                 </div>
-                <button onclick="showComingSoon('Mobile Apps')" class="project-button">
+                <button onclick="showComingSoon('Mobile Apps'); trackButtonClick('Mobile Apps', 'Coming Soon')" class="project-button">
                     📲 Download Apps (Segera Hadir)
                 </button>
             </div>
@@ -493,10 +540,14 @@
                     <span class="status-indicator"></span>Program reward dan cashback eksklusif untuk anggota setia dengan berbagai keuntungan menarik.
                     
                     <ul class="feature-list">
-                        <li>Segera Hadir</li>
+                        <li>Cashback hingga 10%</li>
+                        <li>Poin reward setiap belanja</li>
+                        <li>Birthday bonus special</li>
+                        <li>Referral bonus anggota baru</li>
+                        <li>Event eksklusif anggota</li>
                     </ul>
                 </div>
-                <button onclick="showComingSoon('Program Loyalitas')" class="project-button secondary">
+                <button onclick="showComingSoon('Program Loyalitas'); trackButtonClick('Program Loyalitas', 'Coming Soon')" class="project-button secondary">
                     🏆 Lihat Program Loyalitas (Segera)
                 </button>
             </div>
@@ -510,17 +561,24 @@
                     <h4>🌟 Untuk Calon Anggota</h4>
                     <p>Bergabunglah dengan keluarga besar KDMP dan rasakan perbedaannya!</p>
                     <div class="promo-highlight">
+                        • Diskon belanja hingga 15%<br>
+                        • Simpanan berjasa kompetitif<br>
+                        • Pinjaman bunga rendah<br>
+                        • Divisi hasil usaha (SHU)<br>
                         • Akses produk eksklusif
                     </div>
-                    <p><strong>Daftar sekarang hanya dengan Rp 100.000!</strong></p>
+                    <p><strong>Daftar sekarang hanya dengan Rp 50.000!</strong></p>
                 </div>
                 
                 <div class="promo-card">
                     <h4>🛍️ Untuk Anggota Aktif</h4>
                     <p>Belanja di koperasi = Untung berkali lipat untuk masa depan!</p>
                     <div class="promo-highlight">
+                        • Setiap belanja = poin reward<br>
+                        • Harga lebih murah dari toko lain<br>
                         • Produk segar langsung dari petani<br>
                         • Berkontribusi untuk kemajuan desa<br>
+                        • Cashback bulanan
                     </div>
                     <p><strong>Semakin sering belanja = SHU semakin besar!</strong></p>
                 </div>
@@ -535,26 +593,31 @@
                     <img src="products/beras-premium.jpg" alt="Beras Premium" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                     <span class="product-icon" style="display: none;">🌾</span>
                     <div class="product-name">Beras Premium</div>
+                    <div class="product-price">Rp 12.000/kg</div>
                 </div>
                 <div class="product-card">
                     <img src="products/sayuran-segar.jpg" alt="Sayuran Segar" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                     <span class="product-icon" style="display: none;">🥬</span>
                     <div class="product-name">Sayuran Segar</div>
+                    <div class="product-price">Diskon 20%</div>
                 </div>
                 <div class="product-card">
                     <img src="products/kebutuhan-rumah.jpg" alt="Kebutuhan Rumah" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                     <span class="product-icon" style="display: none;">🧴</span>
                     <div class="product-name">Kebutuhan Rumah</div>
+                    <div class="product-price">Harga Grosir</div>
                 </div>
                 <div class="product-card">
                     <img src="products/kopi-lokal.jpg" alt="Kopi Lokal" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                     <span class="product-icon" style="display: none;">☕</span>
                     <div class="product-name">Kopi Lokal</div>
+                    <div class="product-price">Rp 25.000</div>
                 </div>
                 <div class="product-card">
                     <img src="products/madu-asli.jpg" alt="Madu Asli" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
                     <span class="product-icon" style="display: none;">🍯</span>
                     <div class="product-name">Madu Asli</div>
+                    <div class="product-price">Rp 45.000</div>
                 </div>
                 <div class="product-card">
                     <img src="products/paket-ramadhan.jpg" alt="Paket Ramadhan" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
@@ -637,13 +700,33 @@
             productCards.forEach(card => {
                 card.addEventListener('mouseenter', function() {
                     this.style.transform = 'translateY(-5px) scale(1.05)';
+                    // Track product hover
+                    const productName = this.querySelector('.product-name').textContent;
+                    trackProductView(productName);
                 });
                 
                 card.addEventListener('mouseleave', function() {
                     this.style.transform = 'translateY(0) scale(1)';
                 });
             });
+
+            // Track page load completion
+            trackPageEngagement('Page Loaded');
         });
+
+        // Track scroll depth
+        let scrollTracked = false;
+        window.addEventListener('scroll', function() {
+            if (!scrollTracked && window.scrollY > 500) {
+                trackPageEngagement('Scrolled 50%');
+                scrollTracked = true;
+            }
+        });
+
+        // Track time on page (after 30 seconds)
+        setTimeout(() => {
+            trackPageEngagement('30 Seconds on Page');
+        }, 30000);
     </script>
 </body>
 </html>
