@@ -1,718 +1,1014 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Basic SEO Meta Tags -->
-    <title>Dashboard Anggota - Koperasi Desa Merah Putih Kalurahan Kedungsari</title>
-    <meta name="description" content="Portal anggota Koperasi Desa Merah Putih di Kalurahan Kedungsari. Akses account anggota, gerai koperasi, dan nikmati berbagai keuntungan menjadi anggota.">
-    <meta name="keywords" content="anggota koperasi, koperasi desa, merah putih, kedungsari, dashboard anggota, gerai koperasi, simpan pinjam, belanja koperasi">
-    <meta name="author" content="Koperasi Desa Merah Putih">
-    <meta name="robots" content="index, follow">
-    <meta name="language" content="Indonesian">
-    <meta name="revisit-after" content="7 days">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://kdmp-kedungsari.github.io/anggota/">
-    <meta property="og:title" content="Dashboard Anggota - Koperasi Desa Merah Putih">
-    <meta property="og:description" content="Portal anggota Koperasi Desa Merah Putih di Kalurahan Kedungsari. Bergabunglah dan nikmati keuntungan berbelanja di koperasi desa terpercaya.">
-    <meta property="og:image" content="https://kdmp-kedungsari.github.io/anggota/og-image.jpg">
-    <meta property="og:site_name" content="Koperasi Desa Merah Putih">
-    <meta property="og:locale" content="id_ID">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://kdmp-kedungsari.github.io/anggota/">
-    <meta property="twitter:title" content="Dashboard Anggota - Koperasi Desa Merah Putih">
-    <meta property="twitter:description" content="Portal anggota Koperasi Desa Merah Putih untuk akses layanan dan belanja di gerai koperasi.">
-    <meta property="twitter:image" content="https://kdmp-kedungsari.github.io/anggota/og-image.jpg">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://kdmp-kedungsari.github.io/anggota/">
-    
-    <!-- Schema.org structured data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Koperasi Desa Merah Putih",
-        "description": "Koperasi di Kalurahan Kedungsari yang melayani masyarakat desa dengan berbagai produk dan layanan keuangan.",
-        "url": "https://kdmp-kedungsari.github.io/koperasi-website/",
-        "logo": "https://kdmp-kedungsari.github.io/koperasi-website/assets/logo.png",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Kedungsari",
-            "addressRegion": "Yogyakarta",
-            "addressCountry": "Indonesia"
-        },
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "Customer Service",
-            "availableLanguage": "Indonesian"
-        },
-        "sameAs": [
-            "https://kdmp-kedungsari.github.io/koperasi-website/"
-        ]
-    }
-    </script>
-    
-    <!-- Additional SEO Meta Tags -->
-    <meta name="theme-color" content="#667eea">
-    <meta name="msapplication-TileColor" content="#667eea">
-    <meta name="application-name" content="Dashboard Anggota Koperasi Desa Merah Putih">
-    <meta name="apple-mobile-web-app-title" content="Anggota KDMP">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <!-- Google Analytics 4 (GA4) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JE5G9Y7YPR"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-JE5G9Y7YPR');
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Portal Anggota — Koperasi Desa Merah Putih Kedungsari</title>
+<meta name="description" content="Portal anggota Koperasi Desa Merah Putih di Kalurahan Kedungsari. Akses account anggota, gerai koperasi, dan nikmati berbagai keuntungan menjadi anggota.">
+<meta name="keywords" content="anggota koperasi, koperasi desa, merah putih, kedungsari, dashboard anggota, simpan pinjam">
+<meta name="author" content="Koperasi Desa Merah Putih">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Portal Anggota — Koperasi Desa Merah Putih">
+<meta property="og:description" content="Portal anggota Koperasi Desa Merah Putih di Kalurahan Kedungsari.">
+<meta property="og:locale" content="id_ID">
+<meta name="theme-color" content="#922b21">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="canonical" href="https://kdmp-kedungsari.github.io/anggota/">
 
-        // Custom Event Tracking Functions
-        function trackButtonClick(buttonName, destination) {
-            gtag('event', 'click', {
-                event_category: 'Navigation',
-                event_label: buttonName,
-                value: 1
-            });
-            
-            gtag('event', 'outbound_click', {
-                event_category: 'Outbound Links',
-                event_label: destination,
-                value: 1
-            });
-        }
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JE5G9Y7YPR"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-JE5G9Y7YPR');
+function trackButtonClick(n,d){gtag('event','click',{event_category:'Navigation',event_label:n,value:1});}
+function trackPageEngagement(a){gtag('event','engagement',{event_category:'User Engagement',event_label:a,value:1});}
+</script>
 
-        function trackProductView(productName) {
-            gtag('event', 'view_item', {
-                event_category: 'Product',
-                event_label: productName,
-                value: 1
-            });
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-        function trackPageEngagement(action) {
-            gtag('event', 'engagement', {
-                event_category: 'User Engagement',
-                event_label: action,
-                value: 1
-            });
-        }
-    </script>
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+:root{
+  --merah:#c0392b;--merah-tua:#922b21;--merah-muda:#e74c3c;
+  --merah-pudar:#fdf2f0;--merah-border:#f5b7b1;
+  --krem:#fef9f8;--krem2:#fdf0ed;
+  --abu:#6b7280;--abu2:#374151;--abu3:#1f2937;
+  --putih:#ffffff;
+  --emas:#b8860b;--emas-muda:#d4a017;--emas-pudar:#fef9e7;
+  --hijau:#16a34a;--hijau-pudar:#dcfce7;
+  --rad:16px;
+  --ff-display:'Playfair Display',Georgia,serif;
+  --ff-body:'Plus Jakarta Sans',system-ui,sans-serif;
+  --shad-sm:0 1px 4px rgba(0,0,0,.06);
+  --shad-md:0 4px 20px rgba(0,0,0,.08);
+  --shad-lg:0 12px 40px rgba(0,0,0,.12);
+  --shad-red:0 8px 32px rgba(192,57,43,.22);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--ff-body);
+  background:var(--krem);
+  color:var(--abu2);
+  overflow-x:hidden;
+}
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
+/* ── NOISE TEXTURE OVERLAY ── */
+body::before{
+  content:'';pointer-events:none;position:fixed;inset:0;z-index:9999;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  opacity:.4;
+}
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+/* ══════════════ HERO ══════════════ */
+.hero{
+  position:relative;overflow:hidden;
+  background:var(--merah-tua);
+  min-height:100vh;
+  display:flex;flex-direction:column;
+}
 
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-            color: white;
-            padding: 30px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-        }
+/* Geometric ornament background */
+.hero-bg{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 80% 60% at 110% -10%, rgba(231,76,60,.6) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at -10% 110%, rgba(146,43,33,.8) 0%, transparent 60%),
+    linear-gradient(160deg, #7b241c 0%, #922b21 40%, #c0392b 100%);
+}
+.hero-grid{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+  background-size:48px 48px;
+}
+.hero-circle-1{
+  position:absolute;width:480px;height:480px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.07);
+  top:-140px;right:-140px;
+}
+.hero-circle-2{
+  position:absolute;width:320px;height:320px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.06);
+  top:-60px;right:-60px;
+}
+.hero-circle-3{
+  position:absolute;width:700px;height:700px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.04);
+  bottom:-350px;left:-200px;
+}
 
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
+/* NAV */
+.nav{
+  position:relative;z-index:10;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:20px 32px;
+}
+.nav-brand{display:flex;align-items:center;gap:12px;}
+.nav-logo{
+  width:42px;height:42px;background:rgba(255,255,255,.15);
+  border-radius:12px;display:flex;align-items:center;justify-content:center;
+  font-size:22px;border:1px solid rgba(255,255,255,.25);
+  backdrop-filter:blur(8px);overflow:hidden;
+}
+.nav-logo img{width:100%;height:100%;object-fit:cover;border-radius:10px;}
+.nav-name{color:#fff;}
+.nav-name-main{font-size:13px;font-weight:800;line-height:1.2;letter-spacing:-.01em;}
+.nav-name-sub{font-size:10px;color:rgba(255,255,255,.6);font-weight:500;}
+.nav-badge{
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);
+  color:rgba(255,255,255,.85);font-size:11px;font-weight:600;
+  padding:5px 14px;border-radius:20px;backdrop-filter:blur(8px);
+}
 
-        .header h2 {
-            font-size: 1.2em;
-            opacity: 0.9;
-            font-weight: 300;
-            margin-bottom: 20px;
-        }
+/* HERO CONTENT */
+.hero-body{
+  position:relative;z-index:10;
+  flex:1;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  padding:40px 24px 32px;text-align:center;
+}
+.hero-kop{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);
+  border-radius:20px;padding:6px 16px;margin-bottom:24px;
+  backdrop-filter:blur(8px);
+  font-size:12px;font-weight:700;color:rgba(255,255,255,.8);
+  text-transform:uppercase;letter-spacing:.1em;
+  animation:fadeUp .7s ease both;
+}
+.hero-kop::before{
+  content:'';width:6px;height:6px;border-radius:50%;
+  background:#fde68a;animation:pulse 2s infinite;
+}
+.hero-h1{
+  font-family:var(--ff-display);
+  font-size:clamp(2rem,8vw,4rem);
+  font-weight:900;color:#fff;
+  line-height:1.08;letter-spacing:-.02em;
+  margin-bottom:16px;
+  animation:fadeUp .7s .1s ease both;
+}
+.hero-h1 span{
+  background:linear-gradient(90deg,#fde68a,#fbbf24);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.hero-sub{
+  font-size:clamp(14px,3vw,17px);color:rgba(255,255,255,.72);
+  max-width:480px;line-height:1.7;margin:0 auto 36px;
+  animation:fadeUp .7s .18s ease both;
+}
 
-        .promo-banner {
-            background: linear-gradient(45deg, #ff6b6b, #feca57);
-            padding: 15px 25px;
-            border-radius: 30px;
-            margin-top: 20px;
-            animation: glow 2s ease-in-out infinite alternate;
-        }
+/* CTA BUTTONS */
+.hero-cta{
+  display:flex;flex-wrap:wrap;gap:12px;justify-content:center;
+  animation:fadeUp .7s .26s ease both;
+}
+.btn-primary{
+  display:inline-flex;align-items:center;gap:9px;
+  background:#fff;color:var(--merah-tua);
+  font-family:var(--ff-body);font-size:14px;font-weight:800;
+  padding:14px 28px;border-radius:14px;text-decoration:none;
+  border:none;cursor:pointer;
+  box-shadow:0 4px 24px rgba(0,0,0,.2);
+  transition:transform .15s,box-shadow .15s;letter-spacing:-.01em;
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,.28);}
+.btn-primary:active{transform:scale(.97);}
+.btn-outline{
+  display:inline-flex;align-items:center;gap:9px;
+  background:rgba(255,255,255,.12);color:#fff;
+  border:1.5px solid rgba(255,255,255,.28);
+  font-family:var(--ff-body);font-size:14px;font-weight:700;
+  padding:14px 24px;border-radius:14px;text-decoration:none;
+  cursor:pointer;backdrop-filter:blur(8px);
+  transition:background .15s,transform .15s;
+}
+.btn-outline:hover{background:rgba(255,255,255,.2);transform:translateY(-2px);}
 
-        @keyframes glow {
-            from { box-shadow: 0 0 20px rgba(255, 107, 107, 0.3); }
-            to { box-shadow: 0 0 30px rgba(254, 202, 87, 0.5); }
-        }
+/* HERO STATS STRIP */
+.hero-stats{
+  position:relative;z-index:10;
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:1px;background:rgba(255,255,255,.1);
+  border-top:1px solid rgba(255,255,255,.1);
+}
+.hs{
+  padding:20px 16px;text-align:center;
+  background:rgba(0,0,0,.1);backdrop-filter:blur(8px);
+}
+.hs-val{
+  font-family:var(--ff-display);font-size:28px;font-weight:900;
+  color:#fff;line-height:1;margin-bottom:4px;
+}
+.hs-lbl{font-size:11px;color:rgba(255,255,255,.55);font-weight:600;
+  text-transform:uppercase;letter-spacing:.07em;}
 
-        .dashboard-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
+/* ══════════════ SECTION COMMONS ══════════════ */
+.section{padding:72px 24px;}
+.section-kop{
+  display:inline-block;font-size:11px;font-weight:800;
+  text-transform:uppercase;letter-spacing:.12em;
+  color:var(--merah);background:var(--merah-pudar);
+  border-radius:20px;padding:5px 14px;margin-bottom:14px;
+}
+.section-h2{
+  font-family:var(--ff-display);font-size:clamp(1.6rem,5vw,2.4rem);
+  font-weight:900;color:var(--abu3);letter-spacing:-.02em;
+  line-height:1.15;margin-bottom:12px;
+}
+.section-lead{
+  font-size:15px;color:var(--abu);line-height:1.7;max-width:520px;
+}
+.center{text-align:center;}
+.center .section-lead{margin:0 auto;}
 
-        .project-card {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(20px);
-            border-radius: 20px;
-            padding: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
+/* ══════════════ LAYANAN ══════════════ */
+.layanan{
+  background:var(--putih);
+  border-bottom:1px solid #f3f4f6;
+}
+.layanan-inner{max-width:1100px;margin:0 auto;}
+.layanan-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;margin-top:48px;
+}
+.lcard{
+  background:var(--krem);border:1.5px solid #f3f4f6;
+  border-radius:var(--rad);padding:28px 24px;
+  position:relative;overflow:hidden;
+  transition:border-color .2s,box-shadow .2s,transform .2s;
+  text-decoration:none;color:inherit;display:block;
+}
+.lcard:hover{
+  border-color:var(--merah-border);
+  box-shadow:var(--shad-red);
+  transform:translateY(-4px);
+}
+.lcard-accent{
+  position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--merah-tua),var(--merah-muda));
+}
+.lcard-ico{
+  width:52px;height:52px;border-radius:14px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:26px;margin-bottom:16px;
+  background:var(--merah-pudar);
+}
+.lcard-ico.hijau{background:var(--hijau-pudar);}
+.lcard-ico.emas{background:var(--emas-pudar);}
+.lcard-title{
+  font-size:16px;font-weight:800;color:var(--abu3);
+  margin-bottom:8px;letter-spacing:-.01em;
+}
+.lcard-desc{font-size:13px;color:var(--abu);line-height:1.65;margin-bottom:16px;}
+.lcard-link{
+  font-size:12px;font-weight:700;color:var(--merah);
+  display:inline-flex;align-items:center;gap:5px;
+}
+.lcard-link svg{transition:transform .15s;}
+.lcard:hover .lcard-link svg{transform:translateX(3px);}
+.lcard-tag{
+  position:absolute;top:16px;right:16px;
+  font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;
+  background:#e5e7eb;color:var(--abu);border-radius:6px;padding:2px 7px;
+}
+.lcard-tag.aktif{background:var(--hijau-pudar);color:var(--hijau);}
 
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
-        }
+/* Features list dalam card */
+.lcard-feats{list-style:none;margin:10px 0 16px;}
+.lcard-feats li{
+  font-size:12px;color:var(--abu);padding:4px 0;
+  display:flex;align-items:center;gap:7px;
+}
+.lcard-feats li::before{
+  content:'';width:5px;height:5px;border-radius:50%;
+  background:var(--merah);flex-shrink:0;
+}
 
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-            background: rgba(255, 255, 255, 0.2);
-        }
+/* ══════════════ KEUNTUNGAN ══════════════ */
+.keuntungan{background:var(--krem2);}
+.keuntungan-inner{max-width:1100px;margin:0 auto;}
+.keuntungan-wrap{
+  display:grid;grid-template-columns:1fr 1fr;gap:48px;
+  align-items:center;margin-top:48px;
+}
+@media(max-width:720px){.keuntungan-wrap{grid-template-columns:1fr;gap:32px;}}
+.k-visual{
+  background:linear-gradient(145deg,var(--merah-tua),var(--merah-muda));
+  border-radius:24px;padding:36px 28px;
+  box-shadow:var(--shad-red);
+  position:relative;overflow:hidden;
+}
+.k-visual::before{
+  content:'';position:absolute;width:300px;height:300px;border-radius:50%;
+  background:rgba(255,255,255,.06);top:-120px;right:-100px;
+}
+.k-visual-title{
+  font-family:var(--ff-display);font-size:22px;font-weight:900;
+  color:#fff;margin-bottom:6px;
+}
+.k-visual-sub{font-size:13px;color:rgba(255,255,255,.65);margin-bottom:24px;}
+.k-stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.k-stat{
+  background:rgba(255,255,255,.12);border-radius:12px;
+  padding:14px 12px;text-align:center;
+  border:1px solid rgba(255,255,255,.15);
+}
+.k-stat-val{
+  font-family:var(--ff-display);font-size:24px;font-weight:900;
+  color:#fff;line-height:1;margin-bottom:3px;
+}
+.k-stat-val.emas{color:#fde68a;}
+.k-stat-lbl{font-size:10px;color:rgba(255,255,255,.6);font-weight:600;
+  text-transform:uppercase;letter-spacing:.06em;}
 
-        .project-title {
-            color: white;
-            font-size: 1.4em;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
+.k-list{display:flex;flex-direction:column;gap:16px;}
+.k-item{
+  display:flex;gap:14px;align-items:flex-start;
+  padding:18px;background:var(--putih);border-radius:14px;
+  border:1.5px solid #f3f4f6;
+  transition:border-color .2s,box-shadow .15s;
+}
+.k-item:hover{border-color:var(--merah-border);box-shadow:var(--shad-md);}
+.k-ico{
+  width:42px;height:42px;border-radius:11px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;font-size:20px;
+  background:var(--merah-pudar);
+}
+.k-title{font-size:14px;font-weight:700;color:var(--abu3);margin-bottom:3px;}
+.k-desc{font-size:12px;color:var(--abu);line-height:1.6;}
 
-        .project-description {
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 25px;
-            line-height: 1.6;
-        }
+/* ══════════════ PRODUK UNGGULAN ══════════════ */
+.produk{background:var(--putih);border-top:1px solid #f3f4f6;}
+.produk-inner{max-width:1100px;margin:0 auto;}
+.produk-scroll{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
+  gap:16px;margin-top:40px;
+}
+.pcard{
+  background:var(--krem);border:1.5px solid #f3f4f6;border-radius:14px;
+  padding:20px 14px;text-align:center;
+  transition:transform .2s,border-color .2s,box-shadow .2s;
+}
+.pcard:hover{transform:translateY(-4px);border-color:var(--merah-border);box-shadow:var(--shad-md);}
+.pcard-ico-wrap{
+  width:64px;height:64px;border-radius:50%;margin:0 auto 12px;
+  overflow:hidden;border:2px solid #f3f4f6;
+  background:var(--merah-pudar);
+  display:flex;align-items:center;justify-content:center;
+}
+.pcard-ico-wrap img{
+  width:100%;height:100%;object-fit:cover;
+}
+.pcard-ico-wrap .emoji{font-size:28px;}
+.pcard-name{font-size:13px;font-weight:700;color:var(--abu3);margin-bottom:4px;}
+.pcard-tag{
+  display:inline-block;font-size:10px;font-weight:700;
+  padding:2px 8px;border-radius:20px;
+  background:var(--merah-pudar);color:var(--merah);
+}
+.pcard-tag.promo{background:var(--emas-pudar);color:var(--emas);}
 
-        .feature-list {
-            list-style: none;
-            margin: 15px 0;
-        }
+/* ══════════════ SYARAT ANGGOTA ══════════════ */
+.syarat{
+  background:var(--merah-tua);
+  position:relative;overflow:hidden;
+}
+.syarat::before{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 60% 80% at 100% 50%, rgba(231,76,60,.4), transparent),
+    radial-gradient(ellipse 40% 60% at 0% 50%, rgba(146,43,33,.6), transparent);
+}
+.syarat-bg-grid{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+  background-size:40px 40px;
+}
+.syarat-inner{
+  position:relative;z-index:1;
+  max-width:900px;margin:0 auto;text-align:center;
+}
+.syarat .section-kop{background:rgba(255,255,255,.15);color:#fff;border:none;}
+.syarat .section-h2{color:#fff;}
+.syarat .section-lead{color:rgba(255,255,255,.65);margin:0 auto 44px;}
 
-        .feature-list li {
-            padding: 8px 0;
-            position: relative;
-            padding-left: 30px;
-        }
+.syarat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;}
+.syarat-item{
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);
+  border-radius:14px;padding:22px 18px;
+  backdrop-filter:blur(8px);
+  text-align:center;
+}
+.syarat-num{
+  font-family:var(--ff-display);font-size:36px;font-weight:900;
+  color:rgba(255,255,255,.12);line-height:1;margin-bottom:10px;
+}
+.syarat-ico{font-size:28px;margin-bottom:10px;}
+.syarat-title{font-size:13px;font-weight:700;color:#fff;margin-bottom:4px;}
+.syarat-desc{font-size:12px;color:rgba(255,255,255,.55);line-height:1.6;}
 
-        .feature-list li::before {
-            content: '✅';
-            position: absolute;
-            left: 0;
-            font-size: 1.2em;
-        }
+.syarat-cta{
+  margin-top:44px;
+  display:flex;flex-wrap:wrap;gap:12px;justify-content:center;
+}
 
-        .project-button {
-            display: inline-block;
-            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
-            color: white;
-            text-decoration: none;
-            padding: 12px 30px;
-            border-radius: 30px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(238, 90, 36, 0.3);
-            border: none;
-            cursor: pointer;
-            width: 100%;
-            text-align: center;
-        }
+/* ══════════════ PENGUMUMAN / PROMO ══════════════ */
+.promo{background:var(--krem2);border-top:1px solid #f3f4f6;}
+.promo-inner{max-width:1100px;margin:0 auto;}
+.promo-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px;}
+@media(max-width:680px){.promo-grid{grid-template-columns:1fr;}}
+.promocard{
+  border-radius:var(--rad);overflow:hidden;
+  box-shadow:var(--shad-md);
+}
+.promocard-head{
+  padding:24px 22px 18px;
+  background:linear-gradient(135deg,var(--merah-tua),var(--merah-muda));
+  position:relative;overflow:hidden;
+}
+.promocard-head::after{
+  content:'';position:absolute;width:200px;height:200px;border-radius:50%;
+  background:rgba(255,255,255,.05);bottom:-100px;right:-60px;
+}
+.promocard-head h4{
+  font-family:var(--ff-display);font-size:18px;font-weight:900;
+  color:#fff;margin-bottom:4px;
+}
+.promocard-head p{font-size:12px;color:rgba(255,255,255,.65);}
+.promocard-body{
+  background:var(--putih);padding:18px 22px;
+}
+.promocard-item{
+  display:flex;align-items:center;gap:10px;
+  padding:8px 0;border-bottom:1px solid #f3f4f6;font-size:13px;color:var(--abu2);
+}
+.promocard-item:last-child{border-bottom:none;}
+.promocard-item::before{
+  content:'';width:6px;height:6px;border-radius:50%;
+  background:var(--merah);flex-shrink:0;
+}
+.promocard-footer{
+  padding:14px 22px;background:var(--merah-pudar);
+  font-size:12px;font-weight:700;color:var(--merah);
+}
 
-        .project-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(238, 90, 36, 0.4);
-            background: linear-gradient(45deg, #ee5a24, #ff6b6b);
-        }
+/* ══════════════ FOOTER ══════════════ */
+.footer{
+  background:var(--abu3);
+  padding:40px 24px 28px;
+}
+.footer-inner{
+  max-width:1100px;margin:0 auto;
+}
+.footer-top{
+  display:flex;align-items:center;gap:14px;margin-bottom:24px;
+  padding-bottom:24px;border-bottom:1px solid rgba(255,255,255,.08);
+}
+.footer-logo{
+  width:46px;height:46px;background:rgba(255,255,255,.1);
+  border-radius:12px;display:flex;align-items:center;justify-content:center;
+  font-size:22px;overflow:hidden;border:1px solid rgba(255,255,255,.15);
+}
+.footer-logo img{width:100%;height:100%;object-fit:cover;border-radius:10px;}
+.footer-brand{color:rgba(255,255,255,.9);font-weight:800;font-size:14px;}
+.footer-sub{color:rgba(255,255,255,.4);font-size:11px;margin-top:1px;}
+.footer-links{
+  display:flex;flex-wrap:wrap;gap:8px;margin-left:auto;
+}
+.footer-link{
+  font-size:11px;font-weight:600;color:rgba(255,255,255,.45);
+  text-decoration:none;padding:4px 10px;border-radius:6px;
+  border:1px solid rgba(255,255,255,.08);
+  transition:color .15s,border-color .15s;
+}
+.footer-link:hover{color:rgba(255,255,255,.8);border-color:rgba(255,255,255,.2);}
+.footer-copy{
+  font-size:11px;color:rgba(255,255,255,.28);line-height:1.8;
+}
+.footer-tags{
+  margin-top:10px;font-size:10px;color:rgba(255,255,255,.2);line-height:1.8;
+}
 
-        .project-button.secondary {
-            background: linear-gradient(45deg, #4ecdc4, #44a08d);
-            box-shadow: 0 4px 15px rgba(78, 205, 196, 0.3);
-        }
+/* ══════════════ ANIMATIONS ══════════════ */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(20px);}
+  to{opacity:1;transform:translateY(0);}
+}
+@keyframes pulse{
+  0%,100%{opacity:1;}50%{opacity:.4;}
+}
+@keyframes shimmer{
+  0%{background-position:-200% 0;}
+  100%{background-position:200% 0;}
+}
 
-        .project-button.secondary:hover {
-            background: linear-gradient(45deg, #44a08d, #4ecdc4);
-            box-shadow: 0 6px 20px rgba(78, 205, 196, 0.4);
-        }
+/* Scroll reveal */
+.reveal{
+  opacity:0;transform:translateY(24px);
+  transition:opacity .6s ease, transform .6s ease;
+}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.reveal-delay-1{transition-delay:.1s;}
+.reveal-delay-2{transition-delay:.2s;}
+.reveal-delay-3{transition-delay:.3s;}
+.reveal-delay-4{transition-delay:.4s;}
 
-        .products-showcase {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(20px);
-            border-radius: 20px;
-            padding: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-        }
+/* ══════════════ FLOATING BADGE ══════════════ */
+.float-badge{
+  position:fixed;bottom:24px;right:16px;z-index:500;
+  background:var(--merah);color:#fff;
+  border-radius:50px;padding:12px 20px;
+  font-size:13px;font-weight:700;
+  box-shadow:0 4px 20px rgba(192,57,43,.4);
+  text-decoration:none;
+  display:flex;align-items:center;gap:8px;
+  transition:transform .15s,box-shadow .15s;
+  animation:fadeUp .7s .5s ease both;
+}
+.float-badge:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(192,57,43,.5);}
+.float-badge::before{
+  content:'';width:8px;height:8px;border-radius:50%;
+  background:#86efac;animation:pulse 2s infinite;
+}
 
-        .products-showcase h3 {
-            color: white;
-            margin-bottom: 25px;
-            font-size: 1.4em;
-            text-align: center;
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-
-        .product-card {
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 15px;
-            padding: 20px;
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.3);
-        }
-
-        .product-icon {
-            font-size: 3em;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        .product-image {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 0 auto 10px auto;
-            display: block;
-            border: 3px solid rgba(255, 255, 255, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .product-image:hover {
-            transform: scale(1.1);
-            border-color: rgba(255, 255, 255, 0.8);
-        }
-
-        .product-name {
-            color: white;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .product-price {
-            color: #feca57;
-            font-weight: 700;
-            font-size: 1.1em;
-        }
-
-        .promotion-section {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(20px);
-            border-radius: 20px;
-            padding: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-        }
-
-        .promotion-section h3 {
-            color: white;
-            margin-bottom: 20px;
-            font-size: 1.4em;
-            text-align: center;
-        }
-
-        .promo-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        .promo-card {
-            background: linear-gradient(135deg, rgba(255, 107, 107, 0.8), rgba(254, 202, 87, 0.8));
-            padding: 25px;
-            border-radius: 15px;
-            color: white;
-            text-align: center;
-        }
-
-        .promo-card h4 {
-            font-size: 1.3em;
-            margin-bottom: 15px;
-        }
-
-        .promo-card p {
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-
-        .promo-highlight {
-            background: rgba(255, 255, 255, 0.3);
-            padding: 10px;
-            border-radius: 10px;
-            font-weight: 700;
-        }
-
-        .footer {
-            text-align: center;
-            color: rgba(255, 255, 255, 0.7);
-            margin-top: 40px;
-            font-size: 0.9em;
-        }
-
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2em;
-            }
-            
-            .dashboard-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .project-card {
-                padding: 20px;
-            }
-
-            .products-grid {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-                gap: 15px;
-            }
-
-            .promo-content {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .status-indicator {
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: #4ecdc4;
-            margin-right: 8px;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { opacity: 1; }
-            50% { opacity: 0.5; }
-            100% { opacity: 1; }
-        }
-
-        .coming-soon {
-            opacity: 0.7;
-        }
-
-        .coming-soon .project-button {
-            background: linear-gradient(45deg, #95a5a6, #7f8c8d);
-            box-shadow: 0 4px 15px rgba(149, 165, 166, 0.3);
-        }
-
-        .coming-soon .project-button:hover {
-            background: linear-gradient(45deg, #7f8c8d, #95a5a6);
-            box-shadow: 0 6px 20px rgba(149, 165, 166, 0.4);
-        }
-    </style>
+/* ══════════════ RESPONSIVE ══════════════ */
+@media(max-width:640px){
+  .nav{padding:16px 20px;}
+  .nav-badge{display:none;}
+  .hero-body{padding:32px 20px 24px;}
+  .hero-stats{grid-template-columns:repeat(3,1fr);}
+  .hs-val{font-size:22px;}
+  .section{padding:52px 20px;}
+  .lcard{padding:22px 18px;}
+  .k-stat-grid{grid-template-columns:1fr 1fr;}
+  .footer-links{display:none;}
+}
+</style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>👥 Dashboard Anggota</h1>
-            <h2>🏢 Koperasi Desa Merah Putih - Kalurahan Kedungsari</h2>
-            <div class="promo-banner">
-                <strong>🎉 Bergabunglah dengan 28+ anggota dan rasakan keuntungannya! 🎉</strong>
-            </div>
-        </div>
 
-        <!-- SEO Content for better indexing -->
-        <section style="display: none;" aria-hidden="true">
-            <h1>Portal Anggota Koperasi Desa Merah Putih Kedungsari</h1>
-            <p>Dashboard khusus anggota Koperasi Desa Merah Putih di Kalurahan Kedungsari, Yogyakarta. Akses account anggota, belanja di gerai koperasi, dan nikmati berbagai keuntungan eksklusif untuk anggota.</p>
-            <p>Koperasi simpan pinjam yang memberikan pelayanan terbaik dengan produk berkualitas dan harga terjangkau untuk kesejahteraan bersama.</p>
-        </section>
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-circle-1"></div>
+  <div class="hero-circle-2"></div>
+  <div class="hero-circle-3"></div>
 
-        <div class="dashboard-grid">
-            <div class="project-card">
-                <div class="project-title">
-                    👤 Account Anggota
-                </div>
-                <div class="project-description">
-                    <span class="status-indicator"></span>Portal khusus untuk anggota koperasi. Kelola data pribadi, cek saldo simpanan, dan akses layanan eksklusif anggota.
-                    
-                    <ul class="feature-list">
-                        <li>Cek saldo simpanan real-time</li>
-                        <li>Riwayat transaksi lengkap</li>
-                        <li>Update data pribadi</li>
-                        <li>Notifikasi promo khusus anggota</li>
-                    </ul>
-                </div>
-                <a href="https://script.google.com/macros/s/AKfycbwNx4OLrVlhd55-HV4nQ31cf2kJ3Jw_jwX4i0RjMKueVvxvwTW1dRuufiUHpRNCNlKe/exec" 
-                   target="_blank" 
-                   class="project-button"
-                   onclick="trackButtonClick('Account Anggota', 'Google Apps Script')">
-                   🚀 Masuk ke Account Anggota
-                </a>
-            </div>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-brand">
+      <div class="nav-logo">
+        <img src="Logo.jpg" alt="KDMP" onerror="this.parentElement.textContent='🏠'">
+      </div>
+      <div class="nav-name">
+        <div class="nav-name-main">KDMP Kedungsari</div>
+        <div class="nav-name-sub">Koperasi Desa Merah Putih</div>
+      </div>
+    </div>
+    <div class="nav-badge">🟢 Aktif Beroperasi</div>
+  </nav>
 
-            <div class="project-card">
-                <div class="project-title">
-                    🏪 Gerai Koperasi
-                </div>
-                <div class="project-description">
-                    <span class="status-indicator"></span>Belanja kebutuhan sehari-hari dengan harga spesial anggota. Produk berkualitas, pelayanan terbaik, untung bersama!
-                    
-                    <ul class="feature-list">
-                        <li>Produk segar dan berkualitas</li>
-                        <li>Sistem poin reward</li>
-                        <li>Katalog produk terlengkap</li>
-                    </ul>
-                </div>
-                <a href="https://kdmp-kedungsari.github.io/toko/" 
-                   target="_blank" 
-                   class="project-button secondary"
-                   onclick="trackButtonClick('Gerai Koperasi', 'Website Koperasi', 'toko')">
-                   🛒 Kunjungi Gerai Koperasi
-                </a>
-            </div>
+  <!-- BODY -->
+  <div class="hero-body">
+    <div class="hero-kop">Koperasi Desa Merah Putih · Kedungsari</div>
+    <h1 class="hero-h1">
+      Bersatu,<br>
+      <span>Maju &amp; Sejahtera</span><br>
+      Bersama
+    </h1>
+    <p class="hero-sub">
+      Portal resmi anggota KDMP Kedungsari — kelola simpanan, akses layanan pinjaman,
+      dan nikmati berbagai keuntungan eksklusif koperasi desa.
+    </p>
+    <div class="hero-cta">
+      <a href="https://script.google.com/macros/s/AKfycbwNx4OLrVlhd55-HV4nQ31cf2kJ3Jw_jwX4i0RjMKueVvxvwTW1dRuufiUHpRNCNlKe/exec"
+         class="btn-primary"
+         onclick="trackButtonClick('Masuk Sistem','GAS')"
+         target="_blank">
+        🚀 Masuk ke Sistem
+      </a>
+      <a href="https://kdmp-kedungsari.github.io/toko/"
+         class="btn-outline"
+         onclick="trackButtonClick('Gerai Koperasi','Toko')"
+         target="_blank">
+        🛒 Gerai Koperasi
+      </a>
+    </div>
+  </div>
 
-            <div class="project-card coming-soon">
-                <div class="project-title">
-                    📱 Mobile Apps Anggota
-                </div>
-                <div class="project-description">
-                    <span class="status-indicator"></span>Aplikasi mobile khusus anggota untuk kemudahan akses semua layanan koperasi di genggaman Anda.
-                    
-                    <ul class="feature-list">
-                        <li>Notifikasi push real-time</li>
-                        <li>Scan barcode untuk belanja</li>
-                        <li>E-wallet koperasi</li>
-                        <li>Chat customer service</li>
-                        <li>Lokasi gerai terdekat</li>
-                    </ul>
-                </div>
-                <button onclick="showComingSoon('Mobile Apps'); trackButtonClick('Mobile Apps', 'Coming Soon')" class="project-button">
-                    📲 Download Apps (Segera Hadir)
-                </button>
-            </div>
+  <!-- STATS STRIP -->
+  <div class="hero-stats">
+    <div class="hs">
+      <div class="hs-val">28+</div>
+      <div class="hs-lbl">Anggota Aktif</div>
+    </div>
+    <div class="hs">
+      <div class="hs-val">2024</div>
+      <div class="hs-lbl">Tahun Berdiri</div>
+    </div>
+    <div class="hs">
+      <div class="hs-val">100%</div>
+      <div class="hs-lbl">Milik Desa</div>
+    </div>
+  </div>
+</section>
 
-            <div class="project-card coming-soon">
-                <div class="project-title">
-                    🎯 Program Loyalitas
-                </div>
-                <div class="project-description">
-                    <span class="status-indicator"></span>Program reward dan cashback eksklusif untuk anggota setia dengan berbagai keuntungan menarik.
-                    
-                    <ul class="feature-list">
-                        <li>Poin reward setiap belanja</li>
-                        <li>Birthday bonus special</li>
-                        <li>Referral bonus anggota baru</li>
-                        <li>Event eksklusif anggota</li>
-                    </ul>
-                </div>
-                <button onclick="showComingSoon('Program Loyalitas'); trackButtonClick('Program Loyalitas', 'Coming Soon')" class="project-button secondary">
-                    🏆 Lihat Program Loyalitas (Segera)
-                </button>
-            </div>
-        </div>
-
-        <!-- Promotion Section -->
-        <div class="promotion-section">
-            <h3>🎊 Keuntungan Menjadi Anggota Koperasi Desa Merah Putih</h3>
-            <div class="promo-content">
-                <div class="promo-card">
-                    <h4>🌟 Untuk Calon Anggota</h4>
-                    <p>Bergabunglah dengan keluarga besar KDMP dan rasakan perbedaannya!</p>
-                    <div class="promo-highlight">
-                        • Simpanan berjasa kompetitif<br>
-                        • Divisi hasil usaha (SHU)<br>
-                        • Akses produk eksklusif
-                    </div>
-                    <p><strong>Daftar sekarang hanya dengan Rp 100.000!</strong></p>
-                </div>
-                
-                <div class="promo-card">
-                    <h4>🛍️ Untuk Anggota Aktif</h4>
-                    <p>Belanja di koperasi = Untung berkali lipat untuk masa depan!</p>
-                    <div class="promo-highlight">
-                        • Produk segar langsung dari petani<br>
-                        • Berkontribusi untuk kemajuan desa<br>
-                    </div>
-                    <p><strong>Semakin sering belanja = SHU semakin besar!</strong></p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Products Showcase -->
-        <div class="products-showcase">
-            <h3>🆕 Produk Baru & Promo Spesial</h3>
-            <div class="products-grid">
-                <div class="product-card">
-                    <img src="products/beras-premium.jpg" alt="Beras Premium" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                    <span class="product-icon" style="display: none;">🌾</span>
-                    <div class="product-name">Beras Premium</div>
-                </div>
-                <div class="product-card">
-                    <img src="products/sayuran-segar.jpg" alt="Sayuran Segar" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                    <span class="product-icon" style="display: none;">🥬</span>
-                    <div class="product-name">Sayuran Segar</div>
-                </div>
-                <div class="product-card">
-                    <img src="products/kebutuhan-rumah.jpg" alt="Kebutuhan Rumah" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                    <span class="product-icon" style="display: none;">🧴</span>
-                    <div class="product-name">Kebutuhan Rumah</div>
-                </div>
-                <div class="product-card">
-                    <img src="products/kopi-lokal.jpg" alt="Kopi Lokal" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                    <span class="product-icon" style="display: none;">☕</span>
-                    <div class="product-name">Kopi Lokal</div>
-                </div>
-                <div class="product-card">
-                    <img src="products/madu-asli.jpg" alt="Madu Asli" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                    <span class="product-icon" style="display: none;">🍯</span>
-                    <div class="product-name">Madu Asli</div>
-                </div>
-                <div class="product-card">
-                    <img src="products/paket-ramadhan.jpg" alt="Paket Ramadhan" class="product-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                    <span class="product-icon" style="display: none;">🎁</span>
-                    <div class="product-name">Paket Ramadhan</div>
-                    <div class="product-price">Promo Spesial</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer">
-            <p>© 2024 Koperasi Desa Merah Putih - Kalurahan Kedungsari</p>
-            <p>Dashboard Anggota - Versi 1.0</p>
-            <!-- SEO Footer Content -->
-            <div style="margin-top: 20px; font-size: 0.8em; opacity: 0.6;">
-                <p>Jasa Keuangan | Gerai Belanja | Pemberdayaan Ekonomi Desa | Kalurahan Kedungsari | Yogyakarta</p>
-                <p>Melayani dengan Hati • Berkembang Bersama • Sejahtera Bersama</p>
-            </div>
-        </div>
+<!-- ══ LAYANAN ══ -->
+<section class="section layanan">
+  <div class="layanan-inner">
+    <div class="center">
+      <div class="section-kop reveal">🏦 Layanan Kami</div>
+      <h2 class="section-h2 reveal reveal-delay-1">Satu Pintu,<br>Semua Layanan Koperasi</h2>
+      <p class="section-lead reveal reveal-delay-2">
+        Dari simpanan, pinjaman, hingga belanja kebutuhan harian — semua tersedia
+        dalam ekosistem KDMP Kedungsari.
+      </p>
     </div>
 
-    <script>
-        // Fungsi untuk menampilkan coming soon
-        function showComingSoon(feature) {
-            showNotification(`🚧 ${feature} akan segera hadir! Pantau terus update dari koperasi.`);
-        }
+    <div class="layanan-grid">
 
-        // Fungsi untuk menampilkan notifikasi
-        function showNotification(message) {
-            const notification = document.createElement('div');
-            notification.textContent = message;
-            notification.style.cssText = `
-                position: fixed;
-                top: 20px;
-                right: 20px;
-                background: rgba(78, 205, 196, 0.9);
-                color: white;
-                padding: 15px 25px;
-                border-radius: 10px;
-                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-                z-index: 1000;
-                font-weight: 600;
-                backdrop-filter: blur(10px);
-                max-width: 350px;
-                text-align: center;
-            `;
-            
-            document.body.appendChild(notification);
-            
-            setTimeout(() => {
-                notification.remove();
-            }, 4000);
-        }
+      <!-- Account Anggota -->
+      <a href="https://script.google.com/macros/s/AKfycbwNx4OLrVlhd55-HV4nQ31cf2kJ3Jw_jwX4i0RjMKueVvxvwTW1dRuufiUHpRNCNlKe/exec"
+         class="lcard reveal reveal-delay-1" target="_blank"
+         onclick="trackButtonClick('Account Anggota','GAS')">
+        <div class="lcard-accent"></div>
+        <div class="lcard-tag aktif">Aktif</div>
+        <div class="lcard-ico">👤</div>
+        <div class="lcard-title">Account Anggota</div>
+        <div class="lcard-desc">Portal khusus anggota — cek saldo simpanan, riwayat transaksi, dan akses semua layanan dalam satu sistem.</div>
+        <ul class="lcard-feats">
+          <li>Cek saldo simpanan real-time</li>
+          <li>Riwayat transaksi lengkap</li>
+          <li>Laporan pinjaman & cicilan</li>
+          <li>Jadwal RAT koperasi</li>
+        </ul>
+        <div class="lcard-link">
+          Masuk sekarang
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </a>
 
-        // Tambahkan efek loading saat halaman dimuat
-        window.addEventListener('load', function() {
-            const cards = document.querySelectorAll('.project-card, .products-showcase, .promotion-section');
-            cards.forEach((card, index) => {
-                setTimeout(() => {
-                    card.style.opacity = '0';
-                    card.style.transform = 'translateY(30px)';
-                    card.style.transition = 'all 0.6s ease';
-                    
-                    setTimeout(() => {
-                        card.style.opacity = '1';
-                        card.style.transform = 'translateY(0)';
-                    }, 100);
-                }, index * 100);
-            });
-            
-            // Tampilkan welcome message
-            setTimeout(() => {
-                showNotification('🎉 Selamat datang di Portal Anggota KDMP! Nikmati semua keuntungan eksklusif Anda.');
-            }, 2000);
-        });
+      <!-- Gerai Koperasi -->
+      <a href="https://kdmp-kedungsari.github.io/toko/"
+         class="lcard reveal reveal-delay-2" target="_blank"
+         onclick="trackButtonClick('Gerai Koperasi','Toko')">
+        <div class="lcard-accent"></div>
+        <div class="lcard-tag aktif">Aktif</div>
+        <div class="lcard-ico hijau">🏪</div>
+        <div class="lcard-title">Gerai Koperasi</div>
+        <div class="lcard-desc">Belanja kebutuhan sehari-hari dengan harga spesial anggota. Produk berkualitas, langsung dari sumber.</div>
+        <ul class="lcard-feats">
+          <li>Produk segar & berkualitas</li>
+          <li>Harga terjangkau untuk anggota</li>
+          <li>Beras, sembako, produk lokal</li>
+        </ul>
+        <div class="lcard-link">
+          Kunjungi gerai
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </a>
 
-        // Efek hover pada product cards
-        document.addEventListener('DOMContentLoaded', function() {
-            const productCards = document.querySelectorAll('.product-card');
-            productCards.forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-5px) scale(1.05)';
-                    // Track product hover
-                    const productName = this.querySelector('.product-name').textContent;
-                    trackProductView(productName);
-                });
-                
-                card.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0) scale(1)';
-                });
-            });
+      <!-- Simpan Pinjam -->
+      <div class="lcard reveal reveal-delay-3" style="cursor:default;">
+        <div class="lcard-accent"></div>
+        <div class="lcard-tag aktif">Aktif</div>
+        <div class="lcard-ico emas">💰</div>
+        <div class="lcard-title">Simpan Pinjam</div>
+        <div class="lcard-desc">Layanan simpanan dan pinjaman dengan bunga kompetitif, dikelola secara transparan untuk kesejahteraan bersama.</div>
+        <ul class="lcard-feats">
+          <li>Simpanan pokok & wajib</li>
+          <li>Pinjaman produktif & konsumtif</li>
+          <li>Cicilan fleksibel</li>
+          <li>SHU dibagikan setiap RAT</li>
+        </ul>
+        <div class="lcard-link" style="color:var(--abu);">Hubungi pengurus</div>
+      </div>
 
-            // Track page load completion
-            trackPageEngagement('Page Loaded');
-        });
+      <!-- Mobile App -->
+      <div class="lcard reveal reveal-delay-4" style="cursor:default;opacity:.75;">
+        <div class="lcard-accent" style="background:linear-gradient(90deg,#9ca3af,#d1d5db);"></div>
+        <div class="lcard-tag">Segera Hadir</div>
+        <div class="lcard-ico" style="background:#f3f4f6;">📱</div>
+        <div class="lcard-title">Aplikasi Mobile</div>
+        <div class="lcard-desc">Aplikasi mobile khusus anggota untuk kemudahan akses semua layanan koperasi di genggaman Anda.</div>
+        <ul class="lcard-feats">
+          <li>Notifikasi push real-time</li>
+          <li>E-wallet koperasi</li>
+          <li>Scan barcode belanja</li>
+          <li>Chat customer service</li>
+        </ul>
+        <div class="lcard-link" style="color:var(--abu);">Dalam pengembangan</div>
+      </div>
 
-        // Track scroll depth
-        let scrollTracked = false;
-        window.addEventListener('scroll', function() {
-            if (!scrollTracked && window.scrollY > 500) {
-                trackPageEngagement('Scrolled 50%');
-                scrollTracked = true;
-            }
-        });
+    </div>
+  </div>
+</section>
 
-        // Track time on page (after 30 seconds)
-        setTimeout(() => {
-            trackPageEngagement('30 Seconds on Page');
-        }, 30000);
-    </script>
+<!-- ══ KEUNTUNGAN ══ -->
+<section class="section keuntungan">
+  <div class="keuntungan-inner">
+    <div class="keuntungan-wrap">
+      <!-- Visual kiri -->
+      <div class="k-visual reveal">
+        <div class="k-visual-title">Kenapa Bergabung dengan KDMP?</div>
+        <div class="k-visual-sub">Manfaat nyata, dirasakan langsung oleh anggota</div>
+        <div class="k-stat-grid">
+          <div class="k-stat">
+            <div class="k-stat-val emas">28+</div>
+            <div class="k-stat-lbl">Anggota</div>
+          </div>
+          <div class="k-stat">
+            <div class="k-stat-val">SHU</div>
+            <div class="k-stat-lbl">Tiap Tahun</div>
+          </div>
+          <div class="k-stat">
+            <div class="k-stat-val emas">Rp 100rb</div>
+            <div class="k-stat-lbl">Daftar Mulai</div>
+          </div>
+          <div class="k-stat">
+            <div class="k-stat-val">100%</div>
+            <div class="k-stat-lbl">Transparan</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- List kanan -->
+      <div class="k-list">
+        <div class="section-kop reveal">✨ Keuntungan Anggota</div>
+        <h2 class="section-h2 reveal reveal-delay-1">Investasi Terbaik<br>untuk Keluarga</h2>
+
+        <div class="k-item reveal reveal-delay-1">
+          <div class="k-ico">💹</div>
+          <div>
+            <div class="k-title">Bagi Hasil SHU Setiap Tahun</div>
+            <div class="k-desc">Sisa Hasil Usaha dibagikan proporsional setiap RAT. Semakin aktif bertransaksi, semakin besar SHU Anda.</div>
+          </div>
+        </div>
+        <div class="k-item reveal reveal-delay-2">
+          <div class="k-ico">🏦</div>
+          <div>
+            <div class="k-title">Akses Pinjaman Mudah</div>
+            <div class="k-desc">Pinjaman produktif dengan bunga rendah dan syarat yang tidak memberatkan anggota aktif.</div>
+          </div>
+        </div>
+        <div class="k-item reveal reveal-delay-3">
+          <div class="k-ico">🛡️</div>
+          <div>
+            <div class="k-title">Simpanan Aman & Terpercaya</div>
+            <div class="k-desc">Simpanan dikelola secara transparan, dapat dicek kapan saja melalui sistem digital KDMP.</div>
+          </div>
+        </div>
+        <div class="k-item reveal reveal-delay-4">
+          <div class="k-ico">🌾</div>
+          <div>
+            <div class="k-title">Produk Lokal Berkualitas</div>
+            <div class="k-desc">Belanja di gerai koperasi berarti mendukung petani lokal Kedungsari dan mendapat harga spesial.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PRODUK UNGGULAN ══ -->
+<section class="section produk">
+  <div class="produk-inner">
+    <div class="center">
+      <div class="section-kop reveal">🛒 Gerai Koperasi</div>
+      <h2 class="section-h2 reveal reveal-delay-1">Produk Unggulan</h2>
+      <p class="section-lead reveal reveal-delay-2">Tersedia di gerai koperasi dengan harga terjangkau dan kualitas terpercaya.</p>
+    </div>
+    <div class="produk-scroll">
+      <div class="pcard reveal">
+        <div class="pcard-ico-wrap">
+          <img src="products/beras-premium.jpg" alt="Beras Premium"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="emoji" style="display:none;">🌾</div>
+        </div>
+        <div class="pcard-name">Beras Premium</div>
+        <span class="pcard-tag">Tersedia</span>
+      </div>
+      <div class="pcard reveal reveal-delay-1">
+        <div class="pcard-ico-wrap">
+          <img src="products/sayuran-segar.jpg" alt="Sayuran Segar"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="emoji" style="display:none;">🥬</div>
+        </div>
+        <div class="pcard-name">Sayuran Segar</div>
+        <span class="pcard-tag">Tersedia</span>
+      </div>
+      <div class="pcard reveal reveal-delay-2">
+        <div class="pcard-ico-wrap">
+          <img src="products/kebutuhan-rumah.jpg" alt="Kebutuhan Rumah"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="emoji" style="display:none;">🧴</div>
+        </div>
+        <div class="pcard-name">Kebutuhan Rumah</div>
+        <span class="pcard-tag">Tersedia</span>
+      </div>
+      <div class="pcard reveal reveal-delay-3">
+        <div class="pcard-ico-wrap">
+          <img src="products/kopi-lokal.jpg" alt="Kopi Lokal"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="emoji" style="display:none;">☕</div>
+        </div>
+        <div class="pcard-name">Kopi Lokal</div>
+        <span class="pcard-tag">Tersedia</span>
+      </div>
+      <div class="pcard reveal reveal-delay-4">
+        <div class="pcard-ico-wrap">
+          <img src="products/madu-asli.jpg" alt="Madu Asli"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="emoji" style="display:none;">🍯</div>
+        </div>
+        <div class="pcard-name">Madu Asli</div>
+        <span class="pcard-tag">Tersedia</span>
+      </div>
+      <div class="pcard reveal reveal-delay-4">
+        <div class="pcard-ico-wrap">
+          <img src="products/paket-ramadhan.jpg" alt="Paket Spesial"
+               onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="emoji" style="display:none;">🎁</div>
+        </div>
+        <div class="pcard-name">Paket Spesial</div>
+        <span class="pcard-tag promo">Promo</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SYARAT DAFTAR ══ -->
+<section class="section syarat">
+  <div class="syarat-bg-grid"></div>
+  <div class="syarat-inner">
+    <div class="section-kop reveal">📝 Cara Bergabung</div>
+    <h2 class="section-h2 reveal reveal-delay-1">Daftar Mudah,<br>Manfaat Langsung Terasa</h2>
+    <p class="section-lead reveal reveal-delay-2">
+      Hanya butuh beberapa langkah untuk menjadi bagian dari keluarga besar KDMP Kedungsari.
+    </p>
+    <div class="syarat-grid">
+      <div class="syarat-item reveal reveal-delay-1">
+        <div class="syarat-num">01</div>
+        <div class="syarat-ico">📋</div>
+        <div class="syarat-title">Isi Formulir</div>
+        <div class="syarat-desc">Isi formulir pendaftaran anggota di kantor koperasi atau hubungi pengurus.</div>
+      </div>
+      <div class="syarat-item reveal reveal-delay-2">
+        <div class="syarat-num">02</div>
+        <div class="syarat-ico">💵</div>
+        <div class="syarat-title">Simpanan Pokok</div>
+        <div class="syarat-desc">Bayar simpanan pokok Rp 100.000 sebagai modal awal keanggotaan.</div>
+      </div>
+      <div class="syarat-item reveal reveal-delay-3">
+        <div class="syarat-num">03</div>
+        <div class="syarat-ico">🪪</div>
+        <div class="syarat-title">Verifikasi Data</div>
+        <div class="syarat-desc">Serahkan fotokopi KTP dan kelengkapan dokumen kepada pengurus.</div>
+      </div>
+      <div class="syarat-item reveal reveal-delay-4">
+        <div class="syarat-num">04</div>
+        <div class="syarat-ico">✅</div>
+        <div class="syarat-title">Aktif sebagai Anggota</div>
+        <div class="syarat-desc">Dapatkan nomor anggota dan akses penuh semua layanan KDMP.</div>
+      </div>
+    </div>
+    <div class="syarat-cta reveal">
+      <a href="https://script.google.com/macros/s/AKfycbwNx4OLrVlhd55-HV4nQ31cf2kJ3Jw_jwX4i0RjMKueVvxvwTW1dRuufiUHpRNCNlKe/exec"
+         class="btn-primary" target="_blank"
+         onclick="trackButtonClick('Daftar Anggota','GAS')">
+        🚀 Masuk / Daftar Sekarang
+      </a>
+      <a href="https://kdmp-kedungsari.github.io/toko/"
+         class="btn-outline" target="_blank"
+         onclick="trackButtonClick('Lihat Gerai','Toko')">
+        🏪 Lihat Gerai
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ PROMO & PENGUMUMAN ══ -->
+<section class="section promo">
+  <div class="promo-inner">
+    <div class="center">
+      <div class="section-kop reveal">🎊 Keuntungan & Promo</div>
+      <h2 class="section-h2 reveal reveal-delay-1">Informasi untuk Anggota</h2>
+    </div>
+    <div class="promo-grid">
+      <div class="promocard reveal reveal-delay-1">
+        <div class="promocard-head">
+          <h4>🌟 Untuk Calon Anggota</h4>
+          <p>Bergabunglah dan rasakan perbedaannya!</p>
+        </div>
+        <div class="promocard-body">
+          <div class="promocard-item">Simpanan berjasa kompetitif</div>
+          <div class="promocard-item">Divisi hasil usaha (SHU) tahunan</div>
+          <div class="promocard-item">Akses pinjaman produktif</div>
+          <div class="promocard-item">Harga spesial di gerai koperasi</div>
+        </div>
+        <div class="promocard-footer">💡 Daftar mulai hanya Rp 100.000</div>
+      </div>
+      <div class="promocard reveal reveal-delay-2">
+        <div class="promocard-head">
+          <h4>🛍️ Untuk Anggota Aktif</h4>
+          <p>Belanja di koperasi = untung berkali lipat!</p>
+        </div>
+        <div class="promocard-body">
+          <div class="promocard-item">Produk segar langsung dari petani lokal</div>
+          <div class="promocard-item">Berkontribusi untuk kemajuan desa</div>
+          <div class="promocard-item">SHU proporsional dari belanja</div>
+          <div class="promocard-item">Transparansi pengelolaan keuangan</div>
+        </div>
+        <div class="promocard-footer">💡 Semakin aktif = SHU semakin besar</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-logo">
+        <img src="Logo.jpg" alt="KDMP" onerror="this.parentElement.textContent='🏠'">
+      </div>
+      <div>
+        <div class="footer-brand">Koperasi Desa Merah Putih</div>
+        <div class="footer-sub">Kalurahan Kedungsari, Yogyakarta</div>
+      </div>
+      <div class="footer-links">
+        <a href="https://script.google.com/macros/s/AKfycbwNx4OLrVlhd55-HV4nQ31cf2kJ3Jw_jwX4i0RjMKueVvxvwTW1dRuufiUHpRNCNlKe/exec"
+           class="footer-link" target="_blank">Portal Anggota</a>
+        <a href="https://kdmp-kedungsari.github.io/toko/"
+           class="footer-link" target="_blank">Gerai</a>
+        <a href="https://kdmp-kedungsari.github.io/koperasi-website/"
+           class="footer-link" target="_blank">Website</a>
+      </div>
+    </div>
+    <div class="footer-copy">
+      © 2024 Koperasi Desa Merah Putih - Kalurahan Kedungsari · Portal Anggota v2.0
+    </div>
+    <div class="footer-tags">
+      Jasa Keuangan · Gerai Belanja · Pemberdayaan Ekonomi Desa · Kedungsari · Yogyakarta
+      · Melayani dengan Hati · Berkembang Bersama · Sejahtera Bersama
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING CTA -->
+<a href="https://script.google.com/macros/s/AKfycbwNx4OLrVlhd55-HV4nQ31cf2kJ3Jw_jwX4i0RjMKueVvxvwTW1dRuufiUHpRNCNlKe/exec"
+   class="float-badge" target="_blank"
+   onclick="trackButtonClick('Float CTA','GAS')">
+  🚀 Masuk Sistem
+</a>
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"Koperasi Desa Merah Putih",
+  "description":"Koperasi di Kalurahan Kedungsari yang melayani masyarakat desa.",
+  "url":"https://kdmp-kedungsari.github.io/koperasi-website/",
+  "address":{"@type":"PostalAddress","addressLocality":"Kedungsari","addressRegion":"Yogyakarta","addressCountry":"Indonesia"}
+}
+</script>
+
+<script>
+// ── SCROLL REVEAL ──
+(function(){
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}
+    });
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el);});
+})();
+
+// ── ANALYTICS ──
+var scrollTracked=false;
+window.addEventListener('scroll',function(){
+  if(!scrollTracked&&window.scrollY>500){
+    trackPageEngagement('Scrolled 50%');scrollTracked=true;
+  }
+});
+window.addEventListener('load',function(){trackPageEngagement('Page Loaded');});
+setTimeout(function(){trackPageEngagement('30 Seconds on Page');},30000);
+</script>
 </body>
 </html>
